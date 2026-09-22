@@ -116,8 +116,10 @@ section.block{padding:84px 0}
 .testimonials figure{margin:0;background:#fff;border:1px solid var(--line);padding:28px;font-size:1rem}
 .testimonials blockquote{margin:0 0 1rem}
 .testimonials blockquote p{margin:0 0 .9rem}
-.testimonials figcaption{font:800 .95rem var(--display);color:var(--sapphire)}
-.testimonials figcaption small{display:block;font:600 .85rem var(--body);color:var(--muted);margin-top:.15rem}
+.testimonials figcaption{font:800 .95rem var(--display);color:var(--sapphire);display:flex;align-items:center;gap:.7rem}
+.testimonials figcaption img{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:none;border:2px solid var(--paper)}
+.testimonials figcaption span{display:flex;flex-direction:column}
+.testimonials figcaption small{display:block;font:600 .8rem var(--body);color:var(--muted);margin-top:.1rem}
 .testimonials details summary{cursor:pointer;color:var(--teal-ink);font:800 .95rem var(--display)}
 @media(max-width:900px){.testimonials,.testimonials.four{grid-template-columns:1fr}}
 .list-plain{list-style:none;padding:0;margin:0}
