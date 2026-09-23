@@ -27,6 +27,7 @@ p{margin:0 0 1em}
 .on-dark .eyebrow{color:var(--gold)} .on-dark h1,.on-dark h2,.on-dark h3{color:#fff} .on-dark p{color:#E6ECF5} .on-dark a:not(.btn){color:var(--gold)}
 .lede{font-size:1.3rem;color:var(--muted);max-width:60ch}
 .on-dark .lede{color:#E6ECF5}
+.hero .lede,.page-hero .lede{color:#E6ECF5}
 
 /* crisis banner */
 .crisis-banner{background:#8a1f1f;color:#fff;font:700 .85rem/1.4 var(--body);text-align:center;padding:.55rem 20px}
