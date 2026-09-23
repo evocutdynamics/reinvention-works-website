@@ -101,8 +101,10 @@ section.block{padding:84px 0}
 .cards.two{grid-template-columns:repeat(2,1fr)}
 .card{background:#fff;border:1px solid var(--line);padding:30px 28px;border-top:4px solid var(--teal)}
 .card .num{font:900 .85rem var(--display);letter-spacing:.14em;color:var(--gold-ink);display:block;margin-bottom:.8rem}
+.card-icon{width:42px;height:42px;color:var(--gold-ink);display:block;margin-bottom:1rem}
 .dark .card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.2);border-top-color:var(--gold)}
 .dark .card h3{color:#fff}.dark .card p{color:#E6ECF5}
+.dark .card-icon{color:var(--gold)}
 @media(max-width:900px){.cards,.cards.two{grid-template-columns:1fr}}
 
 .quote{font:900 clamp(1.7rem,3.6vw,2.7rem)/1.2 var(--display);color:var(--sapphire);max-width:22ch}
