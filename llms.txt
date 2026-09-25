@@ -1,0 +1,23 @@
+# Reinvention Works
+
+> Reinvention Works provides peer-led education for adults rebuilding identity after disability, illness, or a health disruption, and for the organizations that support them. It is education, not therapy, medical care, or crisis support. Founder and Lead Facilitator: Shay Edmonds.
+
+## Programs
+- [Programs](https://reinvention-works-website.netlify.app/programs/): The Reinvention Reset System. Your First Move (free), the 3-Day Reinvention Reset, Graduate Community, and Reinvention Coaching Calls (coming soon).
+
+## For organizations
+- [For Organizations](https://reinvention-works-website.netlify.app/organizations/): How healthcare providers, vocational rehabilitation and independent living teams, and employers can make Reinvention Works available as a resource.
+
+## About
+- [About Shay Edmonds](https://reinvention-works-website.netlify.app/about/): The founder's story and the philosophy behind Reinvention Works.
+- [Speaking and Training](https://reinvention-works-website.netlify.app/speaking/): Keynotes, workshops, and organizational training.
+- [The Book](https://reinvention-works-website.netlify.app/book/): Stop the Self-Sabotage: From Broken to Unfinished.
+
+## Optional
+- [Resources](https://reinvention-works-website.netlify.app/resources/): Articles and insights.
+- [Contact](https://reinvention-works-website.netlify.app/contact/)
+- [Accessibility Statement](https://reinvention-works-website.netlify.app/accessibility-statement/)
+- [Privacy Policy](https://reinvention-works-website.netlify.app/privacy-policy/)
+- [Terms and Conditions](https://reinvention-works-website.netlify.app/terms-and-conditions/)
+
+If you are in crisis, call or text 988 (US) or call 911 in an emergency.

@@ -1,0 +1,22 @@
+{
+    "name":  "Reinvention Works",
+    "short_name":  "Reinvention Works",
+    "description":  "Peer-led education for adults rebuilding identity after disability, illness, or a health disruption.",
+    "lang":  "en-US",
+    "start_url":  "/",
+    "display":  "browser",
+    "background_color":  "#FFFEF7",
+    "theme_color":  "#1B365D",
+    "icons":  [
+                  {
+                      "src":  "/assets/icon-192.png",
+                      "sizes":  "192x192",
+                      "type":  "image/png"
+                  },
+                  {
+                      "src":  "/assets/icon-512.png",
+                      "sizes":  "512x512",
+                      "type":  "image/png"
+                  }
+              ]
+}

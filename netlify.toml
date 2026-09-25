@@ -7,6 +7,9 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Frame-Options = "SAMEORIGIN"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000"
+    X-Robots-Tag = "noindex, nofollow"
 
 [[headers]]
   for = "/assets/*"
@@ -34,8 +37,43 @@
   status = 301
 
 [[redirects]]
+  from = "/discovery-call/"
+  to = "/contact/"
+  status = 301
+
+[[redirects]]
   from = "/referral-partnership"
   to = "/organizations/"
+  status = 301
+
+[[redirects]]
+  from = "/referral-partnership/"
+  to = "/organizations/"
+  status = 301
+
+[[redirects]]
+  from = "/blog/"
+  to = "/resources/"
+  status = 301
+
+[[redirects]]
+  from = "/category/*"
+  to = "/resources/"
+  status = 301
+
+[[redirects]]
+  from = "/tag/*"
+  to = "/resources/"
+  status = 301
+
+[[redirects]]
+  from = "/feed"
+  to = "/resources/"
+  status = 301
+
+[[redirects]]
+  from = "/feed/*"
+  to = "/resources/"
   status = 301
 
 [[redirects]]
