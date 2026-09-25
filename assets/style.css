@@ -11,6 +11,7 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
 body{margin:0;background:var(--cream);color:var(--ink);font:1.125rem/1.65 var(--body)}
 img,svg{max-width:100%;display:block}
+img{height:auto}
 a{color:var(--teal-ink);text-underline-offset:3px}
 a:hover{color:var(--sapphire)}
 :focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:2px}
