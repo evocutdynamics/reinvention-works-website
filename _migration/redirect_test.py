@@ -9,7 +9,7 @@ def exists(path):
     if (R/p.lstrip('/')/'index.html').exists(): return 'slash'
     return False
 def match(rule_from,path):
-    pat='^'+re.escape(rule_from).replace(r'\*','.*')+'$'
+    pat='^'+re.sub(r':[a-z]+','[^/]+',re.escape(rule_from)).replace(r'\*','.*')+'$'
     return re.match(pat,path)
 def resolve(url,depth=0):
     path=url.split('?')[0]
@@ -18,8 +18,10 @@ def resolve(url,depth=0):
     if e=='slash': return resolve(path+'/',depth+1)
     for r in rules:
         if match(r['from'],path):
-            if r.get('status',301)==404: return (404,path)
-            return resolve(r['to'],depth+1) if depth<5 else (508,path)
+            if r.get('status',301) in (404,410): return (r['status'],path)
+            to=r['to']
+            if ':slug' in to: to=to.replace(':slug',path.strip('/').split('/')[0])
+            return resolve(to,depth+1) if depth<5 else (508,path)
     return (404,path)
 urls=[l.strip() for l in open(sys.argv[1]) if l.strip()]
 bad=[]
