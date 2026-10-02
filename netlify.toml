@@ -52,6 +52,42 @@
   status = 301
 
 [[redirects]]
+  from = "/resources/page/*"
+  to = "/resources/"
+  status = 301
+
+[[redirects]]
+  from = "/author/*"
+  to = "/about/"
+  status = 301
+
+[[redirects]]
+  from = "/wpa-stats-type/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/home/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/comments/feed/*"
+  to = "/resources/"
+  status = 301
+
+[[redirects]]
+  from = "/_migration/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/404.html"
   status = 404
