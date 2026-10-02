@@ -120,6 +120,12 @@ def main():
     if not a.check:
         if robots_needs: robots.write_text(ROBOTS_TXT)
         if toml_needs: hdr.write_text("# Production: no noindex header.\n")
+        # Send the old staging address to the real domain (Netlify reads _redirects after the build,
+        # and it takes precedence over netlify.toml rules).
+        rd = ROOT / "_redirects"
+        line = f"{STAGING}/*  {PROD}/:splat  301!\n"
+        if not rd.exists() or line not in rd.read_text():
+            rd.write_text((rd.read_text() if rd.exists() else "") + line)
 
     if not a.check:
         left = [str(p.relative_to(ROOT)) for p in files if STAGING in p.read_text(encoding="utf-8") or ROBOTS_META.search(p.read_text(encoding="utf-8"))]
