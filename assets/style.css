@@ -175,3 +175,7 @@ section.block{padding:84px 0}
 .nav a.btn-primary{color:#fff}
 .page-hero .btn-ghost{color:#fff;border-color:#fff}.page-hero .btn-ghost:hover{background:#fff;color:var(--sapphire)}
 .note-quote{margin:1.2rem 0;padding-left:1.1rem;border-left:4px solid var(--gold);font-size:1.12rem;line-height:1.6}
+/* 2026-10-02 WCAG AA contrast fixes */
+.hero .eyebrow{color:var(--gold)}
+.path .step .n{color:var(--gold-ink)}
+.dark .card .num,.on-dark .card .num{color:var(--gold)}
