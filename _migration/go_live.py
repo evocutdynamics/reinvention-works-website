@@ -3,8 +3,15 @@
 Reinvention Works - go-live switch.
 
 Flips the site from STAGING (reinvention-works-website.netlify.app, noindex)
-to PRODUCTION (reinventionworksonline.com, indexable). Run it ONCE, on cutover
-day, after DNS points at Netlify. It is safe to re-run.
+to PRODUCTION (reinventionworksonline.com, indexable). Safe to re-run.
+
+Normally you do NOT run this by hand: netlify.toml runs `go_live.py --ci` on every
+build. It only switches when BOTH are true:
+  - the build is Netlify's production context (CONTEXT=production), and
+  - the Netlify environment variable GO_LIVE is set to 1.
+Deploy previews / branch deploys always stay noindex. Optional env vars: GTM_ID or GA4_ID.
+Set GO_LIVE=1 and deploy BEFORE switching DNS, so Google never sees a noindex
+version of the real domain.
 
   python3 _migration/go_live.py --check            # report only, change nothing
   python3 _migration/go_live.py                    # switch to production
@@ -16,7 +23,7 @@ What it changes:
      JSON-LD, sitemap.xml, llms.txt).
   2. Removes <meta name="robots" content="noindex, nofollow"> from every page.
   3. robots.txt -> allow all crawlers (incl. AI crawlers, a deliberate choice) + Sitemap line.
-  4. netlify.toml -> removes the sitewide X-Robots-Tag: noindex header.
+  4. _headers -> removes the sitewide X-Robots-Tag: noindex header (Netlify reads _headers after the build).
   5. Optional: inserts GTM or GA4 on every page.
 """
 import argparse, pathlib, re, sys
@@ -36,16 +43,22 @@ Disallow: /_migration/
 
 User-agent: GPTBot
 Allow: /
+Disallow: /_migration/
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /_migration/
 User-agent: ClaudeBot
 Allow: /
+Disallow: /_migration/
 User-agent: PerplexityBot
 Allow: /
+Disallow: /_migration/
 User-agent: Google-Extended
 Allow: /
+Disallow: /_migration/
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /_migration/
 
 Sitemap: {PROD}/sitemap.xml
 """
@@ -68,7 +81,17 @@ def main():
     ap.add_argument("--check", action="store_true")
     ap.add_argument("--gtm")
     ap.add_argument("--ga4")
+    ap.add_argument("--ci", action="store_true", help="Netlify build mode: switch only if CONTEXT=production and GO_LIVE=1")
     a = ap.parse_args()
+    if a.ci:
+        import os
+        ctx, live = os.environ.get("CONTEXT", ""), os.environ.get("GO_LIVE", "")
+        if not (ctx == "production" and live == "1"):
+            print(f"go_live.py --ci: staying in STAGING mode (CONTEXT={ctx or 'unset'}, GO_LIVE={live or 'unset'})")
+            return
+        a.gtm = a.gtm or os.environ.get("GTM_ID") or None
+        a.ga4 = a.ga4 or os.environ.get("GA4_ID") or None
+    if a.gtm and a.ga4: sys.exit("Use GTM or GA4, not both (put GA4 inside GTM).")
     if a.gtm and not re.fullmatch(r"GTM-[A-Z0-9]+", a.gtm): sys.exit("GTM ID looks wrong (expected GTM-XXXXXXX)")
     if a.ga4 and not re.fullmatch(r"G-[A-Z0-9]+", a.ga4): sys.exit("GA4 ID looks wrong (expected G-XXXXXXXXXX)")
 
@@ -84,20 +107,24 @@ def main():
             s, k = ROBOTS_META.subn("", s); stats["noindex_meta"] += k
             if a.gtm and "googletagmanager.com/gtm.js" not in s:
                 h, b = gtm_snippets(a.gtm)
-                s = s.replace("<head>", "<head>\n" + h, 1)
+                s = re.sub(r'(<meta name="viewport"[^>]*>)', lambda m: m.group(1) + "\n" + h, s, count=1)
                 s = re.sub(r"(<body[^>]*>)", r"\1\n" + b.replace("\\", "\\\\"), s, count=1); stats["tags_added"] += 1
             elif a.ga4 and "gtag/js?id=" not in s:
-                s = s.replace("<head>", "<head>\n" + ga4_snippet(a.ga4), 1); stats["tags_added"] += 1
+                s = re.sub(r'(<meta name="viewport"[^>]*>)', lambda m: m.group(1) + "\n" + ga4_snippet(a.ga4), s, count=1); stats["tags_added"] += 1
         if s != o and not a.check: p.write_text(s, encoding="utf-8")
 
     robots = ROOT / "robots.txt"
     robots_needs = "Disallow: /\n" in robots.read_text() or "Sitemap:" not in robots.read_text()
-    toml = ROOT / "netlify.toml"; t = toml.read_text()
-    toml_needs = bool(XROBOTS.search(t))
+    hdr = ROOT / "_headers"
+    toml_needs = hdr.exists() and "X-Robots-Tag" in hdr.read_text()
     if not a.check:
         if robots_needs: robots.write_text(ROBOTS_TXT)
-        if toml_needs: toml.write_text(XROBOTS.sub("", t))
+        if toml_needs: hdr.write_text("# Production: no noindex header.\n")
 
+    if not a.check:
+        left = [str(p.relative_to(ROOT)) for p in files if STAGING in p.read_text(encoding="utf-8") or ROBOTS_META.search(p.read_text(encoding="utf-8"))]
+        if left or "Disallow: /\n" in robots.read_text() or (hdr.exists() and "X-Robots-Tag" in hdr.read_text()):
+            sys.exit(f"go_live.py FAILED: staging URL or noindex still present in {left[:5]}")
     mode = "CHECK (nothing changed)" if a.check else "APPLIED"
     print(f"go_live.py - {mode}")
     print(f"  staging URLs -> production : {stats['staging_urls']} in {stats['files_with_staging_urls']} files")

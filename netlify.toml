@@ -1,5 +1,6 @@
 [build]
   publish = "."
+  command = "python3 _migration/go_live.py --ci"
 
 [[headers]]
   for = "/*"
@@ -9,7 +10,6 @@
     X-Frame-Options = "SAMEORIGIN"
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
     Strict-Transport-Security = "max-age=31536000"
-    X-Robots-Tag = "noindex, nofollow"
 
 [[headers]]
   for = "/site.webmanifest"
