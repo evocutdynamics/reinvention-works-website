@@ -37,26 +37,6 @@
   status = 301
 
 [[redirects]]
-  from = "/discovery-call"
-  to = "/contact/"
-  status = 301
-
-[[redirects]]
-  from = "/discovery-call/"
-  to = "/contact/"
-  status = 301
-
-[[redirects]]
-  from = "/referral-partnership"
-  to = "/organizations/"
-  status = 301
-
-[[redirects]]
-  from = "/referral-partnership/"
-  to = "/organizations/"
-  status = 301
-
-[[redirects]]
   from = "/blog/"
   to = "/resources/"
   status = 301
