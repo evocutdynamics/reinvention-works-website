@@ -171,3 +171,11 @@ section.block{padding:84px 0}
 .nl-close:hover{background:var(--sapphire);color:#fff}
 .nl-skip{background:none;border:0;color:var(--muted);text-decoration:underline;font:1rem var(--body);cursor:pointer;padding:.6rem 0}
 @media(max-width:760px){.nl{grid-template-columns:1fr}.nl-side{padding:28px 24px 18px}.nl-side p{display:none}.nl-main{padding:22px 24px}.nl-main iframe{height:300px}}
+/* 2026-10-02 fixes: header CTA text was sapphire-on-sapphire (.nav a overrode .btn-primary); ghost buttons invisible on the sapphire page hero */
+.nav a.btn-primary{color:#fff}
+.page-hero .btn-ghost{color:#fff;border-color:#fff}.page-hero .btn-ghost:hover{background:#fff;color:var(--sapphire)}
+.note-quote{margin:1.2rem 0;padding-left:1.1rem;border-left:4px solid var(--gold);font-size:1.12rem;line-height:1.6}
+/* 2026-10-02 WCAG AA contrast fixes */
+.hero .eyebrow{color:var(--gold)}
+.path .step .n{color:var(--gold-ink)}
+.dark .card .num,.on-dark .card .num{color:var(--gold)}

@@ -1,5 +1,6 @@
 [build]
   publish = "."
+  command = "python3 _migration/go_live.py --ci"
 
 [[headers]]
   for = "/*"
@@ -9,7 +10,6 @@
     X-Frame-Options = "SAMEORIGIN"
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
     Strict-Transport-Security = "max-age=31536000"
-    X-Robots-Tag = "noindex, nofollow"
 
 [[headers]]
   for = "/site.webmanifest"
@@ -24,36 +24,6 @@
 [[redirects]]
   from = "/blog"
   to = "/resources/"
-  status = 301
-
-[[redirects]]
-  from = "/reset"
-  to = "/programs/#reset"
-  status = 301
-
-[[redirects]]
-  from = "/reset/"
-  to = "/programs/#reset"
-  status = 301
-
-[[redirects]]
-  from = "/discovery-call"
-  to = "/contact/"
-  status = 301
-
-[[redirects]]
-  from = "/discovery-call/"
-  to = "/contact/"
-  status = 301
-
-[[redirects]]
-  from = "/referral-partnership"
-  to = "/organizations/"
-  status = 301
-
-[[redirects]]
-  from = "/referral-partnership/"
-  to = "/organizations/"
   status = 301
 
 [[redirects]]
@@ -80,6 +50,112 @@
   from = "/feed/*"
   to = "/resources/"
   status = 301
+
+[[redirects]]
+  from = "/resources/page/*"
+  to = "/resources/"
+  status = 301
+
+[[redirects]]
+  from = "/author/*"
+  to = "/about/"
+  status = 301
+
+[[redirects]]
+  from = "/home/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/comments/feed/*"
+  to = "/resources/"
+  status = 301
+
+[[redirects]]
+  from = "/_migration/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/sitemap_index.xml"
+  to = "/sitemap.xml"
+  status = 301
+
+[[redirects]]
+  from = "/post-sitemap.xml"
+  to = "/sitemap.xml"
+  status = 301
+
+[[redirects]]
+  from = "/page-sitemap.xml"
+  to = "/sitemap.xml"
+  status = 301
+
+[[redirects]]
+  from = "/category-sitemap.xml"
+  to = "/sitemap.xml"
+  status = 301
+
+[[redirects]]
+  from = "/post_tag-sitemap.xml"
+  to = "/sitemap.xml"
+  status = 301
+
+[[redirects]]
+  from = "/angie_snippet-sitemap.xml"
+  to = "/sitemap.xml"
+  status = 301
+
+[[redirects]]
+  from = "/wpa-stats-type-sitemap.xml"
+  to = "/sitemap.xml"
+  status = 301
+
+[[redirects]]
+  from = "/wp-sitemap.xml"
+  to = "/sitemap.xml"
+  status = 301
+
+[[redirects]]
+  from = "/:slug/feed/*"
+  to = "/:slug/"
+  status = 301
+
+[[redirects]]
+  from = "/wpa-stats-type/*"
+  to = "/404.html"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/wp-admin/*"
+  to = "/404.html"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/wp-login.php"
+  to = "/404.html"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/xmlrpc.php"
+  to = "/404.html"
+  status = 410
+  force = true
+
+[[redirects]]
+  from = "/wp-json/*"
+  to = "/404.html"
+  status = 410
+  force = true
 
 [[redirects]]
   from = "/*"
