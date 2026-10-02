@@ -27,16 +27,6 @@
   status = 301
 
 [[redirects]]
-  from = "/reset"
-  to = "/programs/#reset"
-  status = 301
-
-[[redirects]]
-  from = "/reset/"
-  to = "/programs/#reset"
-  status = 301
-
-[[redirects]]
   from = "/blog/"
   to = "/resources/"
   status = 301
