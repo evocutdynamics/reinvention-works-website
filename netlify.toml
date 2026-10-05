@@ -12,6 +12,12 @@
     Strict-Transport-Security = "max-age=31536000"
 
 [[headers]]
+  for = "/assets/your-first-move.pdf"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+    Content-Disposition = "inline; filename=\"Your-First-Move-Reinvention-Works.pdf\""
+
+[[headers]]
   for = "/site.webmanifest"
   [headers.values]
     Content-Type = "application/manifest+json"
