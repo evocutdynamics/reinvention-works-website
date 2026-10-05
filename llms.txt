@@ -1,20 +1,31 @@
 # Reinvention Works
 
-> Reinvention Works provides peer-led education for adults rebuilding identity after disability, illness, or a health disruption, and for the organizations that support them. It is education, not therapy, medical care, or crisis support. Founder and Lead Facilitator: Shay Edmonds.
+> Reinvention Works™ provides peer-led education for adults rebuilding identity after disability, illness, or a health disruption, and for the organizations that support them. It is education, not therapy, medical care, or crisis support. Founder and Lead Facilitator: Shay Edmonds (he/him), a former 911 emergency communications engineer who lost his sight to Anti-MOG antibody disease and rebuilt his identity, career and independence. Operated by Evocut Dynamics LLC (Colorado, USA).
 
-## Programs
-- [Programs](https://reinvention-works-website.netlify.app/programs/): The Reinvention Reset System. Your First Move (free), the 3-Day Reinvention Reset, Graduate Community, and Reinvention Coaching Calls (coming soon).
+Key facts:
+- Free starting point: Your First Move, a free guide with three short tools (the Story Separator, the Energy Snapshot and One True Thing), about 15 minutes in total.
+- Core program: the 3-Day Reinvention Reset™, three consecutive live sessions on Zoom (camera optional). Seats are currently offered through sponsoring organizations (vocational rehabilitation, independent living centers, care teams and employers), not through public enrollment.
+- Graduate Community: ongoing peer support for Reset graduates.
+- 1:1 coaching with Shay starts with a free 15-minute discovery call.
+- Organizations can book a 30-minute partner discovery call or refer a client.
+
+## Start here
+- [Your First Move](https://reinvention-works-website.netlify.app/first-move/): The free guide and what's inside it.
+- [3-Day Reinvention Reset™](https://reinvention-works-website.netlify.app/reset/): What the Reset is, the three days (Reality Check, Energy Sovereignty, Recalibrated Action), and how sponsored seats work.
+- [Programs](https://reinvention-works-website.netlify.app/programs/): The Reinvention Reset™ System: Your First Move, the 3-Day Reinvention Reset™, Graduate Community, and Reinvention Coaching Calls (coming soon).
+- [Discovery call](https://reinvention-works-website.netlify.app/discovery-call/): A free call with Shay for individuals, or a partner call for organizations.
 
 ## For organizations
-- [For Organizations](https://reinvention-works-website.netlify.app/organizations/): How healthcare providers, vocational rehabilitation and independent living teams, and employers can make Reinvention Works available as a resource.
+- [For Organizations](https://reinvention-works-website.netlify.app/organizations/): How healthcare providers, vocational rehabilitation and independent living teams, and employers make Reinvention Works available as a resource.
+- [Referral and partnership](https://reinvention-works-website.netlify.app/referral-partnership/): Refer a client, sponsor Reset seats, or explore a partnership.
+- [Speaking and Training](https://reinvention-works-website.netlify.app/speaking/): Keynotes, workshops and organizational training, with five speaking topics.
 
 ## About
 - [About Shay Edmonds](https://reinvention-works-website.netlify.app/about/): The founder's story and the philosophy behind Reinvention Works.
-- [Speaking and Training](https://reinvention-works-website.netlify.app/speaking/): Keynotes, workshops, and organizational training.
 - [The Book](https://reinvention-works-website.netlify.app/book/): Stop the Self-Sabotage: From Broken to Unfinished.
 
 ## Optional
-- [Resources](https://reinvention-works-website.netlify.app/resources/): Articles and insights.
+- [Resources](https://reinvention-works-website.netlify.app/resources/): 42 articles on identity, capacity, burnout, self-protection and rebuilding after life-altering change.
 - [Contact](https://reinvention-works-website.netlify.app/contact/)
 - [Accessibility Statement](https://reinvention-works-website.netlify.app/accessibility-statement/)
 - [Privacy Policy](https://reinvention-works-website.netlify.app/privacy-policy/)

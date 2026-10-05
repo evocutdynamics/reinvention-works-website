@@ -148,7 +148,7 @@ section.block{padding:84px 0}
 .site-footer{background:var(--sapphire-2);color:#D5DEEC;padding:64px 0 28px;font-size:1rem}
 .site-footer a{color:#fff}
 .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
-.site-footer h4{color:var(--gold);font:800 .8rem var(--display);letter-spacing:.14em;text-transform:uppercase;margin-bottom:1rem}
+.site-footer h3,.site-footer h4{color:var(--gold);font:800 .8rem var(--display);letter-spacing:.14em;text-transform:uppercase;margin-bottom:1rem}
 .site-footer ul{list-style:none;padding:0;margin:0}.site-footer li{margin:.45rem 0}
 .foot-brand b{font:900 1.3rem/1.1 var(--display);letter-spacing:.14em;color:#fff;display:block}
 .foot-brand i{font:700 .8rem var(--display);letter-spacing:.44em;color:var(--gold);font-style:normal;display:block;margin:.3rem 0 1rem}
