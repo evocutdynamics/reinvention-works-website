@@ -179,3 +179,20 @@ section.block{padding:84px 0}
 .hero .eyebrow{color:var(--gold)}
 .path .step .n{color:var(--gold-ink)}
 .dark .card .num,.on-dark .card .num{color:var(--gold)}
+
+/* Cookie consent banner (assets/consent.js) */
+.cc{position:fixed;left:0;right:0;bottom:0;z-index:250;background:var(--cream);border-top:5px solid var(--gold);box-shadow:0 -10px 40px rgba(20,42,74,.18);display:none}
+.cc.show{display:block}
+.cc-in{max-width:1140px;margin:0 auto;padding:18px 20px;display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.cc-text{flex:1 1 420px}
+.cc-title{font-size:1.1rem;margin:0 0 .3em}
+.cc-text p{margin:0;font-size:.98rem}
+.cc-opts{border:0;padding:0;margin:.8rem 0 0;display:flex;gap:18px;flex-wrap:wrap}
+.cc-opts legend{font-weight:700;margin-bottom:.3rem;padding:0}
+.cc-opts label{display:flex;gap:.45rem;align-items:center;font-size:.98rem}
+.cc-opts input{width:20px;height:20px}
+.cc-btns{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.cc-link{background:none;border:0;padding:.6rem .2rem;font:700 .95rem var(--display);color:var(--sapphire);text-decoration:underline;cursor:pointer}
+.cc .btn{padding:.7rem 1.1rem}
+@media (max-width:640px){.cc-btns{width:100%}.cc-btns .btn{flex:1 1 auto;text-align:center}}
+.cc [hidden]{display:none!important}
