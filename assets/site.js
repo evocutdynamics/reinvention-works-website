@@ -55,5 +55,8 @@
     a.addEventListener("click", function (e) { e.preventDefault(); open(); });
   });
 
-  if (!dismissedRecently()) setTimeout(open, DELAY_MS);
+  // Don't stack the sign-up pop-up on top of the cookie banner: wait until a cookie choice is made.
+  function schedule() { if (!dismissedRecently()) setTimeout(open, DELAY_MS); }
+  if (!window.rwConsentDecided || window.rwConsentDecided()) schedule();
+  else document.addEventListener("rw:consent", schedule, { once: true });
 })();
