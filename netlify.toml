@@ -167,3 +167,8 @@
   from = "/*"
   to = "/404.html"
   status = 404
+# LAUNCH SWITCH (2026-10-07): production builds run go_live.py in live mode
+# (canonical = reinventionworksonline.com, indexing on, netlify.app 301s to the domain).
+# Deploy Previews and branch deploys stay in staging mode (noindex).
+[context.production.environment]
+  GO_LIVE = "1"
