@@ -196,3 +196,11 @@ section.block{padding:84px 0}
 .cc .btn{padding:.7rem 1.1rem}
 @media (max-width:640px){.cc-btns{width:100%}.cc-btns .btn{flex:1 1 auto;text-align:center}}
 .cc [hidden]{display:none!important}
+
+/* Keep reading (internal links at the end of articles) */
+.related-reading{margin:2rem 0 0;padding:1.5rem 1.5rem 1.25rem;background:var(--paper);border-left:4px solid var(--gold)}
+.related-reading h2{font-size:1.35rem;margin:0 0 .75rem}
+.related-reading ul{margin:0 0 1rem;padding-left:1.2rem}
+.related-reading li{margin:.4rem 0}
+.related-reading li a{color:var(--teal-ink);font-weight:700}
+.related-reading .rr-next{margin:0;font-size:1rem}
