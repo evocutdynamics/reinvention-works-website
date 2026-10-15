@@ -22,7 +22,7 @@ Key facts:
 
 ## About
 - [About Shay Edmonds](https://reinvention-works-website.netlify.app/about/): The founder's story and the philosophy behind Reinvention Works.
-- [The Book](https://reinvention-works-website.netlify.app/book/): Stop the Self-Sabotage: From Broken to Unfinished.
+- [The Book](https://reinvention-works-website.netlify.app/book/): Stop the Self Sabotage: You’re Not Broken, You’re Unfinished.
 
 ## Optional
 - [Resources](https://reinvention-works-website.netlify.app/resources/): 42 articles on identity, capacity, burnout, self-protection and rebuilding after life-altering change.
