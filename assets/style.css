@@ -123,6 +123,9 @@ section.block{padding:84px 0}
 .testimonials figcaption{font:800 .95rem var(--display);color:var(--sapphire);display:flex;align-items:center;gap:.7rem}
 .testimonials figcaption img{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:none;border:2px solid var(--paper)}
 .testimonials figcaption span{display:flex;flex-direction:column}
+.testimonials figcaption .monogram{width:44px;height:44px;border-radius:50%;flex:none;border:2px solid var(--paper);background:var(--sapphire);color:#fff;font:800 .85rem var(--display);letter-spacing:.04em;display:flex;align-items:center;justify-content:center;flex-direction:row}
+.testimonials.four figure:last-child:nth-child(odd){grid-column:1/-1}
+.testimonials.four figure:last-child:nth-child(odd) blockquote{max-width:72ch}
 .testimonials figcaption small{display:block;font:600 .8rem var(--body);color:var(--muted);margin-top:.1rem}
 .testimonials details summary{cursor:pointer;color:var(--teal-ink);font:800 .95rem var(--display)}
 @media(max-width:900px){.testimonials,.testimonials.four{grid-template-columns:1fr}}
