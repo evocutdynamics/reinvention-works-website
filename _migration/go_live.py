@@ -9,7 +9,7 @@ Normally you do NOT run this by hand: netlify.toml runs `go_live.py --ci` on eve
 build. It only switches when BOTH are true:
   - the build is Netlify's production context (CONTEXT=production), and
   - the Netlify environment variable GO_LIVE is set to 1.
-Deploy previews / branch deploys always stay noindex. Optional env vars: GTM_ID or GA4_ID.
+Deploy previews / branch deploys always stay noindex. Optional env vars: GTM_ID (one ID, or several separated by commas) or GA4_ID.
 Set GO_LIVE=1 and deploy BEFORE switching DNS, so Google never sees a noindex
 version of the real domain.
 
@@ -92,7 +92,9 @@ def main():
         a.gtm = a.gtm or os.environ.get("GTM_ID") or None
         a.ga4 = a.ga4 or os.environ.get("GA4_ID") or None
     if a.gtm and a.ga4: sys.exit("Use GTM or GA4, not both (put GA4 inside GTM).")
-    if a.gtm and not re.fullmatch(r"GTM-[A-Z0-9]+", a.gtm): sys.exit("GTM ID looks wrong (expected GTM-XXXXXXX)")
+    gtm_ids = [g.strip() for g in a.gtm.split(",") if g.strip()] if a.gtm else []
+    for g in gtm_ids:
+        if not re.fullmatch(r"GTM-[A-Z0-9]+", g): sys.exit(f"GTM ID looks wrong: {g} (expected GTM-XXXXXXX)")
     if a.ga4 and not re.fullmatch(r"G-[A-Z0-9]+", a.ga4): sys.exit("GA4 ID looks wrong (expected G-XXXXXXXXXX)")
 
     files = [p for p in ROOT.rglob("*") if p.is_file() and p.suffix in (".html", ".xml", ".txt", ".webmanifest")
@@ -105,10 +107,16 @@ def main():
         s = s.replace(STAGING, PROD)
         if p.suffix == ".html":
             s, k = ROBOTS_META.subn("", s); stats["noindex_meta"] += k
-            if a.gtm and "googletagmanager.com/gtm.js" not in s:
-                h, b = gtm_snippets(a.gtm)
-                s = re.sub(r'(<meta name="viewport"[^>]*>)', lambda m: m.group(1) + "\n" + h, s, count=1)
-                s = re.sub(r"(<body[^>]*>)", r"\1\n" + b.replace("\\", "\\\\"), s, count=1); stats["tags_added"] += 1
+            if gtm_ids:
+                # One head snippet + one noscript per container, in the order given; skip any already present.
+                heads, bodies = [], []
+                for g in gtm_ids:
+                    if f"'dataLayer','{g}')" in s: continue
+                    h, b = gtm_snippets(g); heads.append(h); bodies.append(b)
+                if heads:
+                    hs, bs = "\n".join(heads), "".join(bodies)
+                    s = re.sub(r'(<meta name="viewport"[^>]*>)', lambda m: m.group(1) + "\n" + hs, s, count=1)
+                    s = re.sub(r"(<body[^>]*>)", lambda m: m.group(1) + "\n" + bs, s, count=1); stats["tags_added"] += 1
             elif a.ga4 and "gtag/js?id=" not in s:
                 s = re.sub(r'(<meta name="viewport"[^>]*>)', lambda m: m.group(1) + "\n" + ga4_snippet(a.ga4), s, count=1); stats["tags_added"] += 1
         if s != o and not a.check: p.write_text(s, encoding="utf-8")

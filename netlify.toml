@@ -172,5 +172,6 @@
 # Deploy Previews and branch deploys stay in staging mode (noindex).
 [context.production.environment]
   GO_LIVE = "1"
-  # Google Tag Manager container (GA4 G-R2H9HJ5858 lives inside it, fires only after cookie consent)
-  GTM_ID = "GTM-MHQLTK6G"
+  # Google Tag Manager containers, comma-separated (both wait for cookie consent via the consent default on every page).
+  # GTM-MHQLTK6G holds GA4 G-R2H9HJ5858. GTM-K525Z26W added 2026-10-27 at Shay's request (no GA4 inside it yet).
+  GTM_ID = "GTM-MHQLTK6G,GTM-K525Z26W"
