@@ -163,6 +163,92 @@
   status = 410
   force = true
 
+# Your First Move: send likely mistyped or older addresses to the real page / PDF (2026-11-05)
+[[redirects]]
+  from = "/your-first-move"
+  to = "/first-move/"
+  status = 301
+
+[[redirects]]
+  from = "/your-first-move/"
+  to = "/first-move/"
+  status = 301
+
+[[redirects]]
+  from = "/the-first-move"
+  to = "/first-move/"
+  status = 301
+
+[[redirects]]
+  from = "/the-first-move/"
+  to = "/first-move/"
+  status = 301
+
+[[redirects]]
+  from = "/firstmove"
+  to = "/first-move/"
+  status = 301
+
+[[redirects]]
+  from = "/firstmove/"
+  to = "/first-move/"
+  status = 301
+
+[[redirects]]
+  from = "/free-first-move"
+  to = "/first-move/"
+  status = 301
+
+[[redirects]]
+  from = "/free-first-move/"
+  to = "/first-move/"
+  status = 301
+
+[[redirects]]
+  from = "/first-move.html"
+  to = "/first-move/"
+  status = 301
+
+[[redirects]]
+  from = "/first-move/thank-you"
+  to = "/first-move/"
+  status = 301
+
+[[redirects]]
+  from = "/first-move/thank-you/"
+  to = "/first-move/"
+  status = 301
+
+[[redirects]]
+  from = "/first-move-thank-you"
+  to = "/first-move/"
+  status = 301
+
+[[redirects]]
+  from = "/first-move-thank-you/"
+  to = "/first-move/"
+  status = 301
+
+[[redirects]]
+  from = "/assets/first-move.pdf"
+  to = "/assets/your-first-move.pdf"
+  status = 301
+
+[[redirects]]
+  from = "/the-first-move.pdf"
+  to = "/assets/your-first-move.pdf"
+  status = 301
+
+[[redirects]]
+  from = "/first-move.pdf"
+  to = "/assets/your-first-move.pdf"
+  status = 301
+
+[[redirects]]
+  from = "/your-first-move.pdf"
+  to = "/assets/your-first-move.pdf"
+  status = 301
+
 [[redirects]]
   from = "/*"
   to = "/404.html"
