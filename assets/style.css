@@ -207,3 +207,8 @@ section.block{padding:84px 0}
 .related-reading li{margin:.4rem 0}
 .related-reading li a{color:var(--teal-ink);font-weight:700}
 .related-reading .rr-next{margin:0;font-size:1rem}
+
+/* 2026-11-06: action buttons on the Programs "Four steps" cards, pinned to the bottom so they line up */
+.path .step{display:flex;flex-direction:column}
+.step .step-cta{margin-top:auto;padding-top:1.2rem;min-height:6.4rem;justify-content:flex-start;display:flex;flex-direction:column;align-items:flex-start;gap:.7rem}
+.step .step-cta .btn{padding:.75rem 1.1rem;font-size:.95rem}
