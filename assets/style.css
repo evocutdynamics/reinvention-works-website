@@ -224,3 +224,20 @@ section.block{padding:84px 0}
 .buy-note{font-size:1rem;color:var(--ink)}
 .get-book .btn:focus-visible{outline:3px solid var(--sapphire);outline-offset:3px}
 @media(max-width:640px){.buy-stack{max-width:none}}
+
+/* 2026-11-13 Book page: all-stores grid */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.store-groups{margin-top:56px;border-top:1px solid var(--line);padding-top:40px}
+.store-group-title{margin:2rem 0 .4rem}
+.store-groups .store-group-title:first-child{margin-top:0}
+.store-group-note{color:var(--ink);max-width:70ch;font-size:1.05rem}
+.store-grid{list-style:none;margin:.8rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.store-grid li{margin:0}
+.store-card{display:flex;flex-direction:column;justify-content:center;gap:.2rem;min-height:72px;height:100%;padding:14px 18px;background:#fff;border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:var(--r);text-decoration:none;color:var(--ink);transition:transform .15s,border-color .15s,box-shadow .15s}
+a.store-card:hover{transform:translateY(-2px);border-color:var(--sapphire);border-left-color:var(--gold);box-shadow:0 8px 20px rgba(27,54,93,.12);color:var(--ink)}
+.store-name{font:800 1.1rem/1.2 var(--display);color:var(--sapphire)}
+.store-sub{font-size:.95rem;color:var(--muted)}
+.store-soon{background:transparent;border:2px dashed var(--muted);border-left:2px dashed var(--muted);cursor:default}
+.store-soon .store-name{color:var(--muted)}
+.get-book a.store-card:focus-visible{outline:3px solid var(--sapphire);outline-offset:3px}
+@media(max-width:640px){.store-grid{grid-template-columns:1fr}}
