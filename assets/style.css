@@ -241,3 +241,9 @@ a.store-card:hover{transform:translateY(-2px);border-color:var(--sapphire);borde
 .store-soon .store-name{color:var(--muted)}
 .get-book a.store-card:focus-visible{outline:3px solid var(--sapphire);outline-offset:3px}
 @media(max-width:640px){.store-grid{grid-template-columns:1fr}}
+
+/* 2026-11-17 Speaking page: media list */
+.media-list .num{letter-spacing:.06em;text-transform:none}
+.media-links{margin-top:.8rem}
+.media-links li{margin:.35rem 0}
+.audience-list li{margin:.8rem 0;max-width:70ch}
