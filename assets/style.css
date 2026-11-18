@@ -247,3 +247,6 @@ a.store-card:hover{transform:translateY(-2px);border-color:var(--sapphire);borde
 .media-links{margin-top:.8rem}
 .media-links li{margin:.35rem 0}
 .audience-list li{margin:.8rem 0;max-width:70ch}
+
+/* 2026-11-17 book callout on blog posts */
+.book-callout{margin:2rem 0}
