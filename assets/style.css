@@ -250,3 +250,8 @@ a.store-card:hover{transform:translateY(-2px);border-color:var(--sapphire);borde
 
 /* 2026-11-17 book callout on blog posts */
 .book-callout{margin:2rem 0}
+
+/* 2026-11-17 Reset FAQ */
+.faq-item{border-bottom:1px solid var(--line);padding:.9rem 0}
+.faq-item summary{cursor:pointer;font:800 1.08rem/1.35 var(--display);color:var(--sapphire)}
+.faq-item p{margin:.7rem 0 0}

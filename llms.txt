@@ -25,6 +25,7 @@ Key facts:
 - [The Book](https://reinvention-works-website.netlify.app/book/): Stop the Self Sabotage: You’re Not Broken, You’re Unfinished.
 
 ## Optional
+- [Who Am I Now? Rebuilding Your Identity After Vision Loss or Disability](https://reinvention-works-website.netlify.app/who-am-i-now-identity-after-disability/): Shay Edmonds' step-by-step guide to identity after acquired disability.
 - [Resources](https://reinvention-works-website.netlify.app/resources/): 42 articles on identity, capacity, burnout, self-protection and rebuilding after life-altering change.
 - [Contact](https://reinvention-works-website.netlify.app/contact/)
 - [Accessibility Statement](https://reinvention-works-website.netlify.app/accessibility-statement/)
