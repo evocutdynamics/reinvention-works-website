@@ -65,3 +65,77 @@
   if (!window.rwConsentDecided || window.rwConsentDecided()) schedule();
   else document.addEventListener("rw:consent", schedule, { once: true });
 })();
+
+/* 2026-11-18 Conversion events for Google Analytics 4 (G-R2H9HJ5858).
+   GTM's GA4 tag does not forward custom events, so key events are sent with a separate,
+   page-view-free gtag instance on its own data layer ("rwGaLayer").
+   Respects the cookie banner: nothing loads or sends unless the visitor allowed analytics.
+   Events: generate_lead (GHL form submitted) and booking_click (booking calendar link clicked).
+   Add ?rwdebug=1 to a page URL to log form-iframe messages in the browser console. */
+(function () {
+  var GA = "G-R2H9HJ5858", L = "rwGaLayer", started = false;
+  var DEBUG = /[?&]rwdebug=1/.test(location.search);
+  var FORMS = {
+    "5P9QEHNjigDUcJymygdV": "first_move_signup",
+    "yCD3hqVo8IlTAfF0vOmH": "reset_founding_application",
+    "LbVI2dF2Nsz8x8XBtkYm": "referral_partnership"
+  };
+  var CALENDARS = { "rws-discovery-call": "individual_discovery", "shay-b2b-discovery": "organization_discovery" };
+  window[L] = window[L] || [];
+  function g() { window[L].push(arguments); }
+  function granted() {
+    try { var c = JSON.parse(localStorage.getItem("rw_consent_v1")); return !!(c && c.a); } catch (e) { return false; }
+  }
+  g("consent", "default", { analytics_storage: "denied", ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied" });
+  g("js", new Date());
+  g("config", GA, { send_page_view: false });
+  function start() {
+    if (started || !granted()) return;
+    started = true;
+    g("consent", "update", { analytics_storage: "granted" });
+    var s = document.createElement("script");
+    s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA + "&l=" + L;
+    document.head.appendChild(s);
+  }
+  function send(name, params) {
+    if (!granted()) return;
+    start();
+    params = params || {};
+    params.page_path = location.pathname;
+    params.transport_type = "beacon";
+    g("event", name, params);
+    if (DEBUG) console.log("[rw-analytics]", name, params);
+  }
+  start();
+  document.addEventListener("rw:consent", start);
+
+  // Form submissions from the GoHighLevel form iframes
+  var sent = [];
+  function formNameFor(win) {
+    var frames = document.querySelectorAll("iframe");
+    for (var i = 0; i < frames.length; i++) {
+      if (frames[i].contentWindow === win) {
+        var m = (frames[i].src || "").match(/widget\/form\/([A-Za-z0-9]+)/);
+        return { el: frames[i], name: m ? (FORMS[m[1]] || "form_" + m[1]) : "form_unknown" };
+      }
+    }
+    return null;
+  }
+  window.addEventListener("message", function (e) {
+    if (!/reinventionworksonline\.com|leadconnectorhq\.com|msgsndr\.com/.test(e.origin || "")) return;
+    var raw; try { raw = typeof e.data === "string" ? e.data : JSON.stringify(e.data); } catch (x) { return; }
+    if (DEBUG) console.log("[rw-analytics] message", e.origin, raw && raw.slice(0, 300));
+    if (!/set-sticky-contacts|form-?submit|formSubmitted|form_submitted/i.test(raw || "")) return;
+    var f = formNameFor(e.source); if (!f || sent.indexOf(f.el) > -1) return;
+    sent.push(f.el);
+    send("generate_lead", { form_name: f.name });
+  });
+
+  // Clicks on booking-calendar links
+  document.addEventListener("click", function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href*="/widget/bookings/"]') : null;
+    if (!a) return;
+    var m = a.href.match(/widget\/bookings\/([a-z0-9-]+)/i);
+    send("booking_click", { calendar: m ? (CALENDARS[m[1]] || m[1]) : "unknown", link_text: (a.textContent || "").trim().slice(0, 80) });
+  });
+})();
