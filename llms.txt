@@ -19,6 +19,7 @@ Key facts:
 - [For Organizations](https://reinvention-works-website.netlify.app/organizations/): How healthcare providers, vocational rehabilitation and independent living teams, and employers make Reinvention Works available as a resource.
 - [Referral and partnership](https://reinvention-works-website.netlify.app/referral-partnership/): Refer a client, sponsor Reset seats, or explore a partnership.
 - [Speaking and Training](https://reinvention-works-website.netlify.app/speaking/): Keynotes, workshops and organizational training, with five speaking topics.
+- [Interviews and Podcast Appearances](https://reinvention-works-website.netlify.app/interviews/): Full podcast episodes and short clips featuring Shay Edmonds, with summaries.
 
 ## About
 - [About Shay Edmonds](https://reinvention-works-website.netlify.app/about/): The founder's story and the philosophy behind Reinvention Works.

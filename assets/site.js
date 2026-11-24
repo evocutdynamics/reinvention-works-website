@@ -139,3 +139,24 @@
     send("booking_click", { calendar: m ? (CALENDARS[m[1]] || m[1]) : "unknown", link_text: (a.textContent || "").trim().slice(0, 80) });
   });
 })();
+
+/* Click-to-play YouTube (interviews page). Nothing loads from YouTube until the visitor presses Play. */
+(function () {
+  document.addEventListener("click", function (e) {
+    var btn = e.target && e.target.closest ? e.target.closest(".yt-play") : null;
+    if (!btn) return;
+    var box = btn.parentNode, id = box.getAttribute("data-yt"), title = box.getAttribute("data-title");
+    if (!/^[\w-]{11}$/.test(id || "")) return;
+    var f = document.createElement("iframe");
+    f.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0";
+    f.title = title;
+    f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+    f.allowFullscreen = true;
+    f.setAttribute("tabindex", "0");
+    box.innerHTML = "";
+    box.appendChild(f);
+    box.classList.add("yt-on");
+    f.focus();
+    if (window.gtag) window.gtag("event", "video_play", { video_title: title });
+  });
+})();
