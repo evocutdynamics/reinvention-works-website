@@ -255,3 +255,22 @@ a.store-card:hover{transform:translateY(-2px);border-color:var(--sapphire);borde
 .faq-item{border-bottom:1px solid var(--line);padding:.9rem 0}
 .faq-item summary{cursor:pointer;font:800 1.08rem/1.35 var(--display);color:var(--sapphire)}
 .faq-item p{margin:.7rem 0 0}
+/* Interviews page */
+.episodes{max-width:860px}
+.episodes .note{color:var(--muted)}
+.episode{border-top:4px solid var(--teal);background:#fff;border-left:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px 28px;margin:0 0 40px}
+.ep-meta{font:700 .95rem var(--display);color:var(--gold-ink);margin-bottom:.6rem}
+.credit{font-size:1rem;color:var(--muted);margin-top:1rem}
+.yt{position:relative;aspect-ratio:16/9;background:var(--sapphire-2);margin:1.2rem 0 0;overflow:hidden;border-radius:var(--r)}
+.yt-short{aspect-ratio:9/16;max-width:300px}
+.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.yt-play{all:unset;box-sizing:border-box;position:absolute;inset:0;cursor:pointer;display:block}
+.yt-play img{width:100%;height:100%;object-fit:cover;opacity:.85}
+.yt-play:hover img{opacity:1}
+.yt-play:focus-visible{outline:4px solid var(--gold);outline-offset:-4px}
+.yt-icon{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;background:var(--gold);box-shadow:0 2px 10px rgba(0,0,0,.35)}
+.yt-icon::after{content:"";position:absolute;left:31px;top:23px;border-style:solid;border-width:15px 0 15px 24px;border-color:transparent transparent transparent var(--sapphire-2)}
+.yt-label{position:absolute;left:12px;bottom:12px;background:var(--sapphire-2);color:#fff;font:700 .95rem var(--display);padding:.35rem .7rem;border-radius:var(--r)}
+.clip-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:28px}
+.clip-list h4{font:700 1.1rem var(--display);color:var(--sapphire);margin:0}
+.cta-line{max-width:28ch}
