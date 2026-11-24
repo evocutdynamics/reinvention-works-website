@@ -279,7 +279,7 @@ a.store-card:hover{transform:translateY(-2px);border-color:var(--sapphire);borde
 .hero-tag span{color:var(--gold)}
 .hero .wrap{align-items:center}
 .hero-photo img{width:100%;max-width:400px;margin-left:auto;border-radius:var(--r);border:3px solid rgba(212,165,116,.6)}
-@media(max-width:900px){.hero-photo img{max-width:300px;margin:0}}
+@media(max-width:900px){.hero-photo img{max-width:240px;margin:0}}
 .proof-strip{background:var(--paper);border-bottom:1px solid var(--line);padding:34px 0}
 .proof-items{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
 .proof-items li{font-size:1.02rem}
