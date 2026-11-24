@@ -145,7 +145,7 @@ foot = (ROOT / "speaking/index.html").read_text().split("</main>", 1)[1]
 head = head.replace("Speaking and Training | Shay Edmonds | Reinvention Works", TITLE)
 head = head.replace("Book Shay Edmonds, a legally blind founder and author, for keynotes, workshops and podcasts on disability inclusion, resilience and reinvention.", DESC)
 head = head.replace("/speaking/", "/interviews/")
-head = head.replace('<a href="/interviews/">Podcasts &amp; Interviews</a>', '<a href="/interviews/" aria-current="page">Podcasts &amp; Interviews</a>', 1)
+head = head.replace('<a href="/interviews/">Podcasts</a>', '<a href="/interviews/" aria-current="page">Podcasts</a>', 1)
 head = re.sub(r'<script type="application/ld\+json">.*?</script>',
               '<script type="application/ld+json">' + json.dumps({"@context": "https://schema.org", "@graph": graph}, separators=(",", ":")).replace("&", "\\u0026") + '</script>',
               head, flags=re.S)

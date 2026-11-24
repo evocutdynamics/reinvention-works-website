@@ -328,6 +328,6 @@ details.more[open] summary{margin-bottom:.8rem}
 .how-list b{display:block;font-family:var(--display);color:var(--sapphire)}
 @media(max-width:800px){.how-list{grid-template-columns:1fr}}
 .hero-photo img{aspect-ratio:1/1;object-fit:cover}
-/* Keep the desktop menu on one line with the longer "Podcasts & Interviews" label */
+/* Keep the desktop menu on one line; Menu button below 1180px */
 @media(min-width:1181px){.nav a{white-space:nowrap}}
 @media(min-width:1181px) and (max-width:1340px){.nav{gap:1rem}.nav a{font-size:.9rem}.nav .btn{padding:.65rem .9rem}.brand span{font-size:.95em}}
