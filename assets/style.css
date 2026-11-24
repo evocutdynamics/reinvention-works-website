@@ -310,3 +310,15 @@ a.store-card:hover{transform:translateY(-2px);border-color:var(--sapphire);borde
 @media(max-width:640px){.cc-long{display:none}.cc-short{display:inline}.cc-title{display:inline;margin-right:.3em}}
 details.more summary{cursor:pointer;font:800 1rem var(--display);color:var(--teal-ink);text-decoration:underline;text-underline-offset:3px;margin:.4rem 0 .6rem}
 details.more[open] summary{margin-bottom:.8rem}
+.hero-offer{color:var(--gold);font-weight:700;font-size:1.08rem;margin-top:-.2rem}
+.hero-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.22);border-top:4px solid var(--gold);padding:26px 26px 10px;border-radius:var(--r)}
+.hero-card-title{color:#fff;font-size:1.35rem;margin-bottom:.8rem}
+.hero-card ul{list-style:none;margin:0;padding:0}
+.hero-card li{color:#E6ECF5;font-size:1.02rem;line-height:1.5;margin-bottom:1rem}
+.hero-card li b{display:block;color:#fff;font-family:var(--display)}
+.what-cards .card h3{margin-bottom:.4rem}
+@media(max-width:900px){.hero-offer{font-size:1rem}}
+.hero h1{font-size:clamp(2.1rem,4.4vw,3.4rem)}
+.hero .lede{font-size:1.18rem}
+.hero .hero-offer{color:var(--gold)}
+.hero .btn-row{margin-top:1.1rem}
