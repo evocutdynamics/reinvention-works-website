@@ -29,7 +29,8 @@
   el.innerHTML =
     '<div class="cc-in">' +
       '<div class="cc-text"><h2 class="cc-title">Your privacy, your choice</h2>' +
-      '<p>We use essential cookies to run this site. With your permission, we also use analytics cookies to learn which pages help people, and marketing cookies to measure our outreach. ' +
+      '<p><span class="cc-long">We use essential cookies to run this site. With your permission, we also use analytics cookies to learn which pages help people, and marketing cookies to measure our outreach. </span>' +
+      '<span class="cc-short">We use essential cookies, plus analytics and marketing cookies only if you allow them. </span>' +
       'See our <a href="/privacy-policy/">Privacy Policy</a>.</p>' +
       '<fieldset class="cc-opts" hidden><legend>Choose which cookies to allow</legend>' +
         '<label><input type="checkbox" checked disabled> Essential (always on)</label>' +
