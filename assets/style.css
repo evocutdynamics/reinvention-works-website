@@ -308,3 +308,5 @@ a.store-card:hover{transform:translateY(-2px);border-color:var(--sapphire);borde
 @media(max-width:900px){.hero .wrap{padding-top:28px;padding-bottom:44px;gap:28px}.hero .lede{font-size:1.12rem;line-height:1.5}.hero h1{margin-bottom:.4em}.hero-tag{font-size:1rem;margin-bottom:.6rem}}
 .cc-short{display:none}
 @media(max-width:640px){.cc-long{display:none}.cc-short{display:inline}.cc-title{display:inline;margin-right:.3em}}
+details.more summary{cursor:pointer;font:800 1rem var(--display);color:var(--teal-ink);text-decoration:underline;text-underline-offset:3px;margin:.4rem 0 .6rem}
+details.more[open] summary{margin-bottom:.8rem}
