@@ -322,3 +322,9 @@ details.more[open] summary{margin-bottom:.8rem}
 .hero .lede{font-size:1.18rem}
 .hero .hero-offer{color:var(--gold)}
 .hero .btn-row{margin-top:1.1rem}
+.how-title{margin-top:1.6rem}
+.how-list{list-style:none;margin:0 0 2rem;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.how-list li{border-left:4px solid var(--gold);padding-left:16px}
+.how-list b{display:block;font-family:var(--display);color:var(--sapphire)}
+@media(max-width:800px){.how-list{grid-template-columns:1fr}}
+.hero-photo img{aspect-ratio:1/1;object-fit:cover}
