@@ -124,7 +124,7 @@ for i, ep in enumerate(EPISODES, 1):
 playlist = (f'<a class="text-link" href="{e(PLAYLIST_URL)}" target="_blank" rel="noopener noreferrer">Watch the full playlist on YouTube: Shay Edmonds: Interviews and Podcast Appearances (opens in new tab)</a>'
             if PLAYLIST_URL else '')
 
-TITLE = "Interviews and Podcasts with Shay Edmonds | Reinvention Works"
+TITLE = "Podcasts and Interviews: Shay Edmonds | Reinvention Works"
 DESC = ("Watch Reinvention Works founder Shay Edmonds on podcasts and shows about rebuilding "
         "identity after disability, vision loss and major life change.")
 
