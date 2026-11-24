@@ -24,17 +24,13 @@ EPISODES = [
         id="UMPWnsymiGY", show="Together We Rise", hosts="Rochelle and Alisha Schwartz",
         title="If Your Life Were a Movie, What Would This Chapter Be Called?",
         date_label="November 2026", upload="2026-11-22T20:32:31-08:00", seconds=2061,
-        summary="Shay talks about how a major life disruption affects identity, relationships and confidence, "
-                "and what you can build from where you are now. For anyone whose life has been upended "
-                "and who is asking who they are now.",
+        summary="How a major life disruption affects identity, relationships and confidence, and what you can build from where you are now. For anyone whose life has been upended and who is asking who they are now.",
         clips_ok=False, clips=[]),
     dict(
         id="il0EQZNaGII", show="Find Your Way on New Cleveland Radio", hosts="Karen Hale and Kristy Anderson",
         title="Reinvent Yourself with Shay",
         date_label="November 19, 2026", upload="2026-11-19T13:30:21-08:00", seconds=2853,
-        summary="On this show about grief, Shay talks about rebuilding his life after disability and a major "
-                "disruption, and why, after all the medical care, nobody asked who he was going to be. "
-                "Helpful for anyone grieving a life that has changed, and for the families beside them.",
+        summary="On this show about grief: rebuilding a life after disability and a major disruption, and the question all the medical care never asked: who am I going to be now? Helpful for anyone grieving a life that has changed, and for the families beside them.",
         clips_ok=True, clips=[
             dict(id="H6nCmY0Ky70", title="Nobody asked who I was going to be", seconds=48,
                  upload="2026-11-23T14:17:38-08:00"),
@@ -47,18 +43,13 @@ EPISODES = [
         id="wNXAsrjSXhM", show="Famous Interviews", hosts="Joe Dimino",
         title="Shay Edmonds on Reinvention, Overcoming Life Challenges and Stopping Self-Sabotage",
         date_label="November 17, 2026", upload="2026-11-17T17:42:05-08:00", seconds=977,
-        summary="Shay talks about losing most of his vision as an adult, and the gap between treatment and "
-                "building a life you want afterwards. He also discusses his book, Stop the Self Sabotage, "
-                "and the patterns that hold people back. For anyone whose life has taken an unexpected turn.",
+        summary="Losing most of your vision as an adult, and the gap between treatment and building a life you want afterwards. Also covers the book Stop the Self Sabotage and the patterns that hold people back. For anyone whose life has taken an unexpected turn.",
         clips_ok=False, clips=[]),
     dict(
         id="44EM7XbWwjg", show="The Inclusive Dad Podcast", hosts="Aaron DeVries",
         title="Episode 226: Your Disability Changed Your Life. It Didn't End Your Possibilities!",
         date_label="November 10, 2026", upload="2026-11-10T01:00:08-08:00", seconds=2521,
-        summary="Shay talks about losing his independence to vision loss and how it touched his relationships, "
-                "dating, parenting and learning to ask for help. He explains how the stories we tell ourselves "
-                "can keep us playing small. Helpful for people rebuilding after disability, and for families "
-                "who want to understand inclusion.",
+        summary="Losing independence to vision loss, and how it touches relationships, dating, parenting and learning to ask for help. Also, how the stories we tell ourselves can keep us playing small. Helpful for people rebuilding after disability, and for families who want to understand inclusion.",
         clips_ok=True, clips=[
             # Approved, link not live yet: "Not blind, not sighted", "Asking for help made my life bigger",
             # "My son's play-by-play", "My blueprint was missing the kitchen",
@@ -68,18 +59,13 @@ EPISODES = [
         id="yYK21hwRwIk", show="Reclaim Your Energy After 50", hosts="John Curran",
         title="When the Old You No Longer Fits: Reinventing Yourself and Finding What's Next",
         date_label="November 3, 2026", upload="2026-11-03T11:11:30-08:00", seconds=1331,
-        summary="Shay talks about becoming legally blind and having to rethink independence, career and "
-                "relationships, and about letting go of self-sabotaging beliefs. For people over 50 facing "
-                "a life transition or wondering what comes next.",
+        summary="Becoming legally blind and rethinking independence, career and relationships, and letting go of self-sabotaging beliefs. For people over 50 facing a life transition or wondering what comes next.",
         clips_ok=False, clips=[]),
     dict(
         id="VqomfAubyAM", show="Healthy Mind, Healthy Life", hosts="Avik",
         title="Rebuilding Identity After Life Disruption: You Are Not Broken, You Are Unfinished",
         date_label="October 30, 2026", upload="2026-10-30T17:39:46-07:00", seconds=1492,
-        summary="Shay talks about the question that arrives when the appointments end: who am I now? He explains "
-                "why healing the body and rebuilding a sense of self are two different journeys, and how a new "
-                "blueprint and small daily steps help. For anyone whose life has been rewritten by a health "
-                "change or disability.",
+        summary="The question that arrives when the appointments end: who am I now? Why healing the body and rebuilding a sense of self are two different journeys, and how a new blueprint and small daily steps help. For anyone whose life has been rewritten by a health change or disability.",
         clips_ok=False, clips=[]),
 ]
 
@@ -138,13 +124,13 @@ for i, ep in enumerate(EPISODES, 1):
 playlist = (f'<a class="text-link" href="{e(PLAYLIST_URL)}" target="_blank" rel="noopener noreferrer">Watch the full playlist on YouTube: Shay Edmonds: Interviews and Podcast Appearances (opens in new tab)</a>'
             if PLAYLIST_URL else '[NEEDS: playlist link for "Shay Edmonds: Interviews and Podcast Appearances"]')
 
-TITLE = "Shay Edmonds Interviews and Podcasts | Reinvention Works"
-DESC = ("Watch Shay Edmonds, a legally blind founder and author, on podcasts and shows about rebuilding "
+TITLE = "Interviews and Podcasts with Shay Edmonds | Reinvention Works"
+DESC = ("Watch Reinvention Works founder Shay Edmonds on podcasts and shows about rebuilding "
         "identity after disability, vision loss and major life change.")
 
 graph = [
     {"@type": "CollectionPage", "@id": f"{SITE}/interviews/#webpage", "url": f"{SITE}/interviews/",
-     "name": "Shay Edmonds: Interviews and Podcast Appearances", "description": DESC, "inLanguage": "en-US",
+     "name": "Interviews and Podcast Appearances with Shay Edmonds", "description": DESC, "inLanguage": "en-US",
      "isPartOf": {"@id": f"{SITE}/#website"}, "publisher": {"@id": f"{SITE}/#organization"}},
     {"@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE}/"},
@@ -168,8 +154,8 @@ main = f'''<main id="main">
 <section class="page-hero">
   <div class="wrap">
     <div class="eyebrow" style="color:var(--gold)">Interviews &amp; podcast</div>
-    <h1>Shay Edmonds: interviews and podcast appearances.</h1>
-    <p class="lede">Hear Shay talk honestly about losing his sight, rebuilding who he is, and what helps people start again after disability or a major health change.</p>
+    <h1>Interviews and podcast appearances.</h1>
+    <p class="lede">Reinvention Works founder Shay Edmonds talks honestly about losing his sight, rebuilding who he is, and how Reinvention Works helps people start again after disability or a major health change.</p>
     <p class="playlist on-dark">{playlist}</p>
   </div>
 </section>
@@ -182,6 +168,7 @@ main = f'''<main id="main">
 <section class="block alt" aria-labelledby="cta-title">
   <div class="wrap">
     <h2 id="cta-title" class="cta-line">Rebuilding life after disability or a major health change?</h2>
+    <p class="lede">The ideas in these conversations are the foundation of the 3-Day Reinvention Reset from Reinvention Works.</p>
     <div class="btn-row"><a class="btn btn-primary" href="{CTA_URL}">Join the free 3-Day Reinvention Reset</a></div>
   </div>
 </section>
