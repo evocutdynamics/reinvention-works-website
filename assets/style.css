@@ -331,3 +331,8 @@ details.more[open] summary{margin-bottom:.8rem}
 /* Keep the desktop menu on one line; Menu button below 1180px */
 @media(min-width:1181px){.nav a{white-space:nowrap}}
 @media(min-width:1181px) and (max-width:1340px){.nav{gap:1rem}.nav a{font-size:.9rem}.nav .btn{padding:.65rem .9rem}.brand span{font-size:.95em}}
+.listen-links{list-style:none;padding:0;margin:1rem 0 0;display:flex;flex-wrap:wrap;gap:.6rem}
+.listen-links a{display:inline-block;padding:.55rem .95rem;border:2px solid var(--line);border-radius:999px;font-weight:700;text-decoration:none;min-height:44px;line-height:1.6}
+.listen-links a:hover,.listen-links a:focus-visible{border-color:var(--gold-ink);text-decoration:underline}
+.listen{margin-top:1rem}.listen-label{display:block;font-weight:700;font-size:.95rem;color:var(--muted)}
+.listen .listen-links{margin-top:.4rem}
