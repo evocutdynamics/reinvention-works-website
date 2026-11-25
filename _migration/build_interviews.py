@@ -62,14 +62,38 @@ EPISODES = [
         summary="Becoming legally blind and rethinking independence, career and relationships, and letting go of self-sabotaging beliefs. For people over 50 facing a life transition or wondering what comes next.",
         clips_ok=False, clips=[]),
     dict(
-        id="VqomfAubyAM", show="Healthy Mind, Healthy Life", hosts="Avik",
+        id="VqomfAubyAM", show="Healthy Mind, Healthy Life", hosts="Avik Chakraborty",
         title="Rebuilding Identity After Life Disruption: You Are Not Broken, You Are Unfinished",
         date_label="October 30, 2026", upload="2026-10-30T17:39:46-07:00", seconds=1492,
         summary="The question that arrives when the appointments end: who am I now? Why healing the body and rebuilding a sense of self are two different journeys, and how a new blueprint and small daily steps help. For anyone whose life has been rewritten by a health change or disability.",
         clips_ok=False, clips=[]),
 ]
 
+# Recorded but not yet published. No links until the host posts the episode;
+# when one goes live, move it into EPISODES above (with its YouTube id) and delete it here.
+RECORDED = [
+    dict(show="The MISOGI Method", hosts="Jody B. Miller", date_label="November 19, 2026"),
+    dict(show="Lethal Venom", hosts="Noah May", date_label="November 18, 2026"),
+    dict(show="The Elisha Show", hosts=None, date_label="November 10, 2026"),
+]
+# Booked recordings. When recorded, move to RECORDED.
+UPCOMING = [
+    dict(show="The Blind Spot", hosts="Sarah Larose and Keila Alequin", date_label="December 2026"),
+    dict(show="Sunday Edition", hosts="ACB Media Network", date_label="December 2026", by=True),
+    dict(show="Positive Talk Radio", hosts="Bleav Network", date_label="December 2026", by=True),
+    dict(show="The Blind Chick", hosts="Aftersight", date_label="January 2027", by=True),
+    dict(show="It Happened To Me", hosts=None, date_label="January 2027"),
+]
+
 e = lambda s: html.escape(s, quote=True)
+
+
+def show_line(x):
+    who = ""
+    if x.get("hosts"):
+        who = f' from {e(x["hosts"])}' if x.get("by") else f' with {e(x["hosts"])}'
+    return f'<li><strong>{e(x["show"])}</strong>{who} &middot; {e(x["date_label"])}</li>'
+
 
 
 def mins(sec):
@@ -164,6 +188,20 @@ main = f'''<main id="main">
   <div class="wrap episodes">
     <p class="note">Newest first. Each video plays only when you press its Play button, and nothing plays on its own.</p>
 {chr(10).join(sections)}
+  </div>
+</section>
+<section class="block" aria-labelledby="soon-title">
+  <div class="wrap episodes">
+    <h2 id="soon-title">Recorded and coming soon</h2>
+    <p>These conversations are recorded and waiting for each show to publish. We add the episode here as soon as it goes live.</p>
+    <ul class="list-plain soon-list">
+{chr(10).join(show_line(x) for x in RECORDED)}
+    </ul>
+    <h3>Booked</h3>
+    <ul class="list-plain soon-list">
+{chr(10).join(show_line(x) for x in UPCOMING)}
+    </ul>
+    <p class="note">Producers and hosts: <a href="/speaking/">see topics and booking details</a>.</p>
   </div>
 </section>
 <section class="block alt" aria-labelledby="cta-title">
