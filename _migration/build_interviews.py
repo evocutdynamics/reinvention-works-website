@@ -52,7 +52,7 @@ EPISODES = [
         summary='Losing eyesight, career, marriage and confidence, and the question that followed: who am I now? How self-worth, resilience and changing your personal story help you move forward after loss.',
         clips_ok=False, clips=[]),
     dict(
-        id=None, show="The Elisha Show", hosts=None,
+        id=None, show="The Elisha Show", hosts='Elisha Arowojobe',
         title='Rebuilding Your Life After Disability: Finding Purpose Again',
         date_label="November 10, 2026", upload="2026-11-10", seconds=1320, apple="https://podcasts.apple.com/us/podcast/rebuilding-your-life-after-disability-finding-purpose/id1583983723?i=1000801076750", spotify="https://open.spotify.com/episode/7hsuc1Ak63atKKlkToMN03",
         summary='What happens when the life you planned becomes impossible? Career, marriage, friendships and identity after losing most of his sight, and building a new blueprint instead of letting disability define the future.',
@@ -80,7 +80,7 @@ EPISODES = [
         summary="The question that arrives when the appointments end: who am I now? Why healing the body and rebuilding a sense of self are two different journeys, and how a new blueprint and small daily steps help. For anyone whose life has been rewritten by a health change or disability.",
         clips_ok=False, clips=[]),
     dict(
-        id=None, show="The Life Wisdom Lab", hosts=None,
+        id=None, show="The Life Wisdom Lab", hosts='Asia Laurent',
         title='Rebuilding Life After Disability: Overcome Adversity, Build Resilience and Start Again',
         date_label="October 23, 2026", upload="2026-10-23", seconds=1426, apple="https://podcasts.apple.com/us/podcast/rebuilding-life-after-disability-overcome-adversity/id6818146365?i=1000797795872", spotify="https://open.spotify.com/episode/7g5ssErRxti1O0B4jQI2Yu",
         summary='When the person you used to be no longer fits your future: losing most of his vision, rebuilding a career, navigating relationships and finding a new purpose.',
