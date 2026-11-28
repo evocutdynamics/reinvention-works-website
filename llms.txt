@@ -25,9 +25,14 @@ Key facts:
 - [About Shay Edmonds](https://reinvention-works-website.netlify.app/about/): The founder's story and the philosophy behind Reinvention Works.
 - [The Book](https://reinvention-works-website.netlify.app/book/): Stop the Self Sabotage: You’re Not Broken, You’re Unfinished.
 
+## Adjusting to disability
+- [Somebody Moved the Kitchen: Adjusting to a New Disability](https://reinvention-works-website.netlify.app/adjusting-to-a-new-disability/): Shay Edmonds' main guide to adjusting to an acquired disability: why the stages don't go in order, and how to draw a new blueprint for your life.
+- [Disability Grief: Why You Grieve a Life You're Still Living](https://reinvention-works-website.netlify.app/disability-grief-grieving-a-life-youre-still-living/): Why disability brings grief for a life you're still living, how it shows up as frustration or anger, and how naming it helps it move.
+- [How to Accept a Disability Without Pretending You're Fine](https://reinvention-works-website.netlify.app/how-to-accept-a-disability-without-pretending-youre-fine/): What accepting a disability means when it doesn't mean being happy about it, and practical ways to stop pretending you're fine.
+
 ## Optional
 - [Who Am I Now? Rebuilding Your Identity After Vision Loss or Disability](https://reinvention-works-website.netlify.app/who-am-i-now-identity-after-disability/): Shay Edmonds' step-by-step guide to identity after acquired disability.
-- [Resources](https://reinvention-works-website.netlify.app/resources/): 42 articles on identity, capacity, burnout, self-protection and rebuilding after life-altering change.
+- [Resources](https://reinvention-works-website.netlify.app/resources/): 45 articles on identity, capacity, burnout, self-protection and rebuilding after life-altering change.
 - [Contact](https://reinvention-works-website.netlify.app/contact/)
 - [Accessibility Statement](https://reinvention-works-website.netlify.app/accessibility-statement/)
 - [Privacy Policy](https://reinvention-works-website.netlify.app/privacy-policy/)
